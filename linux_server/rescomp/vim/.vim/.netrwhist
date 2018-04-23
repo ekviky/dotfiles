@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/gpfs1/well/gerton/kvik/projects/TEscreen/Broad/P150756/test_subset/test_update_codes/final/scripts'
+let g:netrw_dirhist_2='/gpfs1/well/gerton/kvik/projects/TEscreen/Broad/P150756/test_subset/test_update_codes/final/annotations'
+let g:netrw_dirhist_3='/gpfs1/well/gerton/kvik/projects/TEscreen/Broad/P150756/test_subset/test_update_codes/final/scripts'

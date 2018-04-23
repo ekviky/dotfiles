@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/kvik/bin'
+let g:netrw_dirhist_2='/Users/kvik/BRC/projects/HICF2/data/geneLists/lungdev'
+let g:netrw_dirhist_3='/Users/kvik/BRC/projects/HICF2/data/geneLists'
+let g:netrw_dirhist_4='/Users/kvik/projects/ekviky.github.io/_layouts'

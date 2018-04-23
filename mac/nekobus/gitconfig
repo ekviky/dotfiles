@@ -1,0 +1,7 @@
+[user]
+	name = ekviky
+	email = ekviky@users.noreply.github.com
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = ~/.gitignore

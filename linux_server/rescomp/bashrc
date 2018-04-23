@@ -1,0 +1,109 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+# System-wide .profile for sh(1)
+# the following copied from /etc/profile
+PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/loca/sbin"
+export PATH
+
+if [ "${BASH-no}" != "no" ]; then
+	        [ -r /etc/bashrc ] && . /etc/bashrc
+fi
+
+# the following copied from /etc/bashrc
+# System-wide .bashrc file for interactive bash(1) shells.
+if [ -n "$PS1" ]; then PS1='\h:\w \u\$ '; fi
+# Make bash check it's window size after a process completes
+shopt -s checkwinsize
+
+
+# the following  copied from kvik@herbie: ~/.bashrc
+# Use system defaults, if available
+# test -f /depot/apps/etc/set-path.sh && . /depot/apps/etc/set-path.sh
+# If running interactively, then:
+if [ "$PS1" ]; then
+
+    # don't put duplicate lines in the history. See bash(1) for more options
+    export HISTCONTROL=ignoredups
+
+    # check the window size after each command and, if necessary,
+    # update the values of LINES and COLUMNS.
+    #shopt -s checkwinsize
+
+    # enable color support of ls and also add handy aliases
+    #if [ "$TERM" != "dumb" ]; then
+    	#   :
+    	#  eval `dircolors -b`
+       	 alias ls='ls --color=auto'
+	#alias dir='ls --color=auto --format=vertical'
+        #alias vdir='ls --color=auto --format=long'
+    #fi
+    # some more ls aliases
+    alias ll='ls -l'
+    #alias la='ls -A'
+    #alias l='ls -CF'
+
+    # set a fancy prompt
+    PS1='\u@\h:\w\$ '
+    # If this is an xterm set the title to user@host:dir
+    case $TERM in
+    xterm*)
+        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+        ;;
+    *)
+	;;
+    esac
+
+							
+	
+
+    #eneble programmable completion features (you don't need to enable
+    # this, if it's already enabled in /etc/bash.bashrc).
+    #if [ -f /etc/bash_completion ]; then
+    #  . /etc/bash_completion
+    #fi
+fi
+
+# set user specific environment
+export CLICOLOR=yes
+export TERM=xterm-color
+
+# set paths for rescomp cluster
+# 20170602 PATH=/gpfs0/mgmt/sge/6.2u5/bin/lx26-amd64:/usr/lpp/mmfs/bin:${PATH}
+PATH=/mgmt/uge/8.5.0/bin/lx-amd64:/usr/lpp/mmfs/bin:${PATH}
+# set user specific paths
+PATH=/usr/local/genetics/bin:${PATH}
+PATH=~/bin:$PATH
+PATH=$PATH:~/bin/powerpc
+PATH=$PATH:/usr/X11R6/bin
+PATH=$PATH:/usr/local/mysql/bin          	# MySQL client 
+PATH=$PATH:/usr/local/bin
+PATH=/apps/well/R/3.1.0/bin/:${PATH}
+PATH=/apps/well/plink/1.90b2n/:${PATH}
+#PATH=/well/gel/HICF2/software/bin-linux:${PATH}
+
+# paths and env variables for BRC/HICF2
+export SOFTWARE=/well/gel/HICF2/software
+PATH=$SOFTWARE/bin-linux:${PATH}
+
+export PERL5LIB=$SOFTWARE/vcftools_0.1.12b/perl
+export C_INCLUDE_PATH=$SOFTWARE/htslib-1.2.1/include/:${C_INCLUDE_PATH}
+export LIBRARY_PATH=$SOFTWARE/htslib-1.2.1/lib/:${LIBRARY_PATH}
+
+export LD_LIBRARY_PATH=$SOFTWARE/htslib-1.2.1/lib/:${LD_LIBRARY_PATH}
+LD_LIBRARY_PATH=/apps/well/boost/1.55.0/lib:${LD_LIBRARY_PATH}
+
+MANPATH=~/man:${MANPATH}
+MANPATH=${MANPATH}:/usr/X11R6/man
+MANPATH=/gpfs0/mgmt/sge/6.2u5/man:/usr/share/man/overrides:/usr/share/man/en:/usr/share/man:/usr/local/share/man:${MANPATH}
+
+# for rescomp set module R 
+#module load R/3.1.0
+#module load R/3.0.3 
+#module load R/2.15.3 # testing data.table 1.8.8 and works other pckgs not
+module load R/3.1.2 # testing data.table 1.8.8 works.
+#module load R/3.1.3 # testing data.table 1.9.6 DOES NOT work, to debug later
+module load python/2.7.10 # testing python version for stampy bug maptools.so 
+
+# set user specific aliases
+alias runR='R --no-restore --no-save --no-readline'
+alias runR64='R --no-restore --no-save --no-readline'
