@@ -71,9 +71,8 @@ export TERM=xterm-color
 PATH=~/bin:$PATH
 PATH=$PATH:~/bin/powerpc
 PATH=$PATH:/usr/X11R6/bin
-PATH=$PATH:/usr/local/mysql/bin          	# MySQL client 
 PATH=$PATH:/usr/local/bin
-
+PATH=/usr/local/bin/:${PATH}
 
 MANPATH=~/man:$MANPATH
 MANPATH=$MANPATH:/usr/X11R6/man
