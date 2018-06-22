@@ -9,6 +9,7 @@ mac
 linux server  
 &nbsp;&nbsp;&nbsp;&nbsp;rescomp  
 &nbsp;&nbsp;&nbsp;&nbsp;whg LAN: florence/dougal/dylan  
+&nbsp;&nbsp;&nbsp;&nbsp;domino  
 
 ## Inspiration
 I'm a self-proclaimed n00b at managing dotfiles using git, so this is a work in progress. I learned/borrowed/stole ideas for dotfile management and osx setup from the sites:  
