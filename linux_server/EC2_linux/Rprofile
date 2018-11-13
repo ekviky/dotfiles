@@ -1,0 +1,10 @@
+# set multiple package repositories
+local({
+	r <- getOption("repos")
+	r["CRAN"] <- "https://cran.cnr.berkeley.edu/"
+	r["bran"] <- "http://bran.pri.bms.com"
+	r["xran"] <- "http://kraken.pri.bms.com/biohtml/nositeminder/BRAN/XRAN/"
+	r["BioCsoft"] <- "http://bioconductor.org/packages/release/bioc/"
+
+  options(repos = r)
+})
