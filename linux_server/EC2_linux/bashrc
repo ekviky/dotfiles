@@ -74,15 +74,9 @@ export TERM=xterm-color
 
 # set user specific paths
 PATH=~/bin:$PATH
-PATH=$PATH:~/bin/powerpc
-PATH=$PATH:/usr/X11R6/bin
 PATH=/usr/local/bin/:${PATH}
-#PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-PATH=/Applications/domino:$PATH # add Domino to path
 
 MANPATH=~/man:$MANPATH
-MANPATH=$MANPATH:/usr/X11R6/man
-MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 # set user specific aliases
 alias runR='R --no-restore --no-save --no-readline'
@@ -96,9 +90,6 @@ export http_proxy=http://proxy-server.bms.com:8080
 export HTTP_PROXY=http://proxy-server.bms.com:8080
 
 # AWS credentials for amazon cloud
-export AWS_ACCESS_KEY_ID=AKIAISUMOX3IMVIF723A
-export AWS_SECRET_ACCESS_KEY=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
-
-# java jdk and JAVA_HOME not installed/set on default macos
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/
+export AWS_ACCESS_KEY_ID=Axxxxxxxxxxxxxxxxxxx
+export AWS_SECRET_ACCESS_KEY=f5cxxxxxx/xxxxxxxxxx/xxxxxxxxxxxxxxxxxxx
 
