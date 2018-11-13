@@ -1,0 +1,97 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+# System-wide .profile for sh(1)
+# the following copied from /etc/profile
+PATH="/bin:/sbin:/usr/bin:/usr/sbin"
+export PATH
+
+if [ "${BASH-no}" != "no" ]; then
+	        [ -r /etc/bashrc ] && . /etc/bashrc
+fi
+
+# the following copied from /etc/bashrc
+# System-wide .bashrc file for interactive bash(1) shells.
+if [ -n "$PS1" ]; then PS1='\h:\w \u\$ '; fi
+# Make bash check it's window size after a process completes
+shopt -s checkwinsize
+
+
+# the following  copied from kvik@herbie: ~/.bashrc
+# Use system defaults, if available
+# test -f /depot/apps/etc/set-path.sh && . /depot/apps/etc/set-path.sh
+# If running interactively, then:
+if [ "$PS1" ]; then
+
+    # don't put duplicate lines in the history. See bash(1) for more options
+    export HISTCONTROL=ignoredups
+
+    # check the window size after each command and, if necessary,
+    # update the values of LINES and COLUMNS.
+    #shopt -s checkwinsize
+
+    # enable color support of ls and also add handy aliases
+    #if [ "$TERM" != "dumb" ]; then
+    	#   :
+    	#  eval `dircolors -b`
+       	# alias ls='ls --color=auto'
+	#alias dir='ls --color=auto --format=vertical'
+        #alias vdir='ls --color=auto --format=long'
+    #fi
+    # some more ls aliases
+    alias ll='ls -l'
+    #alias la='ls -A'
+    #alias l='ls -CF'
+
+    # set a fancy prompt
+    PS1='\u@\h:\w\$ '
+    # If this is an xterm set the title to user@host:dir
+    case $TERM in
+    xterm*)
+        PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+        ;;
+    *)
+	;;
+    esac
+
+							
+	
+
+    #eneble programmable completion features (you don't need to enable
+    # this, if it's already enabled in /etc/bash.bashrc).
+    #if [ -f /etc/bash_completion ]; then
+    #  . /etc/bash_completion
+    #fi
+fi
+
+# set user specific environment
+#export CLICOLOR=1
+export CLICOLOR=yes
+export LSCOLORS=exfxcxdxbxegedabagacad
+
+export color_prompt=yes
+export TERM=xterm-color
+#export TERM=xterm-256color
+
+# set user specific paths
+PATH=~/bin:$PATH
+PATH=/usr/local/bin/:${PATH}
+PATH=$PATH:/ngs/apps/htslib-1.9/bin/
+/ngs/apps/samtools-1.9
+
+MANPATH=~/man:$MANPATH
+
+# set user specific aliases
+alias runR='R --no-restore --no-save --no-readline'
+
+# turn off hombebrew analytics
+export HOMEBREW_NO_ANALYTICS=1
+
+# bms-specific proxies
+export https_proxy=http://proxy-server.bms.com:8080
+export http_proxy=http://proxy-server.bms.com:8080
+export HTTP_PROXY=http://proxy-server.bms.com:8080
+
+# AWS credentials for amazon cloud
+export AWS_ACCESS_KEY_ID=Axxxxxxxxxxxxxxxxxxx
+export AWS_SECRET_ACCESS_KEY=f5cxxxxxx/xxxxxxxxxx/xxxxxxxxxxxxxxxxxxx
+
