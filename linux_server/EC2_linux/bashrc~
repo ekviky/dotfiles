@@ -75,7 +75,8 @@ export TERM=xterm-color
 # set user specific paths
 PATH=~/bin:$PATH
 PATH=/usr/local/bin/:${PATH}
-PATH=$PATH:/ngs/apps/htslib-1.9/bin/:/ngs/apps/samtools-1.9:/ngs/apps/bcftools-1.9/bin/
+PATH=$PATH:/ngs/apps/htslib-1.9/bin/
+/ngs/apps/samtools-1.9
 
 MANPATH=~/man:$MANPATH
 
