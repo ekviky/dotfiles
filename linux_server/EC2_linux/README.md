@@ -20,4 +20,5 @@ IP:172-25-130-31
 	htslib
 
 - [ ] add NFS mount /stash, faster than sshfs (ie, FUSE) and over same network
-
+- [ ] update git version
+git version 1.8.3.1
