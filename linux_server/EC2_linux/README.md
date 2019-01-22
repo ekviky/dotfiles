@@ -4,6 +4,7 @@ IP:172-25-130-31
 ## to do: :clipboard:
 - [x] vimrc
 - [x] bashrc
+NB: bashrc.example versioned file; sensitive info in bashrc not versioned (.git/info/exclude)  
 - [x] bash_profile
 - [ ] bash_aliases
 - [x] Renviron
