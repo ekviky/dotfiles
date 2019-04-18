@@ -1,0 +1,6 @@
+R_LIBS=~/R_libs/3.4.4
+http_proxy="http://proxy-server.bms.com:8080"
+https_proxy="http://proxy-server.bms.com:8080"
+
+AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxxx
+AWS_SECRET_ACCESS_KEY=xxxxxxxxx/xxxxxxxxxx/xxxxxxxxxxxxxxxxxxx
